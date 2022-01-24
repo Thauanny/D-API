@@ -4,6 +4,7 @@ import (
 	"d-api/cmd/entities"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strings"
 )
 
 var drinks = []entities.Drink{
@@ -70,4 +71,16 @@ func GetDrinksByID(c *gin.Context) {
 		}
 	}
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "drink not found"})
+}
+
+func GetDrinksByName(c *gin.Context) {
+	name := c.Param("name")
+
+	for _, a := range drinks {
+		if strings.Contains(a.Name, name) {
+			c.IndentedJSON(http.StatusOK, a)
+			return
+		}
+	}
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "food not found"})
 }

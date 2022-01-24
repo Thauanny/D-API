@@ -11,10 +11,12 @@ func main() {
 	router := gin.Default()
 	router.GET("/foods", foods.GetFoods)
 	router.POST("/foods", foods.PostFoods)
+	router.GET("/foods/food/:name", foods.GetFoodByName)
 	router.GET("/foods/:id", foods.GetFoodByID)
 	router.GET("/drinks", drinks.GetDrinks)
 	router.POST("/drinks", drinks.PostDrinks)
 	router.GET("/drinks/:id", drinks.GetDrinksByID)
+	router.GET("/drinks/drink/:name", drinks.GetDrinksByName)
 
 	err := router.Run("localhost:8080")
 	if err != nil {

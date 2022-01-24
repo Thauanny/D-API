@@ -4,6 +4,7 @@ import (
 	"d-api/cmd/entities"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strings"
 )
 
 var foods = []entities.Food{
@@ -89,6 +90,18 @@ func GetFoodByID(c *gin.Context) {
 
 	for _, a := range foods {
 		if a.ID == id {
+			c.IndentedJSON(http.StatusOK, a)
+			return
+		}
+	}
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "food not found"})
+}
+
+func GetFoodByName(c *gin.Context) {
+	name := c.Param("name")
+
+	for _, a := range foods {
+		if strings.Contains(strings.ToLower(a.Name), strings.ToLower(name)) {
 			c.IndentedJSON(http.StatusOK, a)
 			return
 		}
