@@ -13,13 +13,13 @@ var foods = []entities.Food{
 		Description: "simple chicken parm",
 		Price:       56.99},
 	{ID: "2", Name: "Salad", Image: [2]string{
-		"https://www.skinnytaste.com/wp-content/uploads/2012/09/skinny-chicken-parmigiana-550x733.jpg",
-		"https://assets.bonappetit.com/photos/5ea9a053093f970009773e21/master/w_1600,c_limit/Chicken-Parm-Pan-Inline.jpg"},
+		"https://cdn.loveandlemons.com/wp-content/uploads/2019/07/salad.jpg",
+		"https://www.onceuponachef.com/images/2019/07/Big-Italian-Salad.jpg"},
 		Description: "simple salad",
 		Price:       17.99},
 	{ID: "3", Name: "Lasagna", Image: [2]string{
-		"https://www.skinnytaste.com/wp-content/uploads/2012/09/skinny-chicken-parmigiana-550x733.jpg",
-		"https://assets.bonappetit.com/photos/5ea9a053093f970009773e21/master/w_1600,c_limit/Chicken-Parm-Pan-Inline.jpg"},
+		"https://www.thespruceeats.com/thmb/-YUYSXc4T2H4P8o2JBApzJ3F5rw=/2069x2069/smart/filters:no_upscale()/white-and-red-sauce-lasagna-recipe-995925-hero-1-fb2c2142b39042069f0c50310047256d.jpg",
+		"https://www.jessicagavin.com/wp-content/uploads/2017/07/meat-lasagna-1200.jpg"},
 		Description: "simple lasagna",
 		Price:       39.99},
 	{ID: "4", Name: "Beef", Image: [2]string{
@@ -55,7 +55,7 @@ var foods = []entities.Food{
 	{ID: "10", Name: "Soup", Image: [2]string{
 		"https://www.inspiredtaste.net/wp-content/uploads/2018/09/Easy-Chicken-Noodle-Soup-Recipe-1200.jpg",
 		"https://assets.bonappetit.com/photos/5e31fc9a461d010008e1e976/1:1/w_2560%2Cc_limit/Basically-Lemony-Chicken-Orzo-Soup.jpg"},
-		Description: "soupe",
+		Description: "soup",
 		Price:       39.99},
 }
 
