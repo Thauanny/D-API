@@ -97,14 +97,19 @@ func GetFoodByID(c *gin.Context) {
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "food not found"})
 }
 
-func GetFoodByName(c *gin.Context) {
+func GetFoodsByName(c *gin.Context) {
 	name := c.Param("name")
+	var result []entities.Food
 
 	for _, a := range foods {
 		if strings.Contains(strings.ToLower(a.Name), strings.ToLower(name)) {
-			c.IndentedJSON(http.StatusOK, a)
-			return
+			result = append(result, a)
 		}
 	}
-	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "food not found"})
+
+	if len(result) > 0 {
+		c.IndentedJSON(http.StatusOK, result)
+	} else {
+		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "food not found"})
+	}
 }

@@ -11,7 +11,7 @@ func main() {
 	router := gin.Default()
 	router.GET("/foods", foods.GetFoods)
 	router.POST("/foods", foods.PostFoods)
-	router.GET("/foods/food/:name", foods.GetFoodByName)
+	router.GET("/foods/food/:name", foods.GetFoodsByName)
 	router.GET("/foods/:id", foods.GetFoodByID)
 	router.GET("/drinks", drinks.GetDrinks)
 	router.POST("/drinks", drinks.PostDrinks)
