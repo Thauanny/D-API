@@ -2,15 +2,16 @@ package drinks
 
 import (
 	"d-api/cmd/entities"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 var drinks = []entities.Drink{
 	{ID: "1", Name: "Coca cola", Image: [2]string{
-		"https://www.google.com/imgres?imgurl=https%3A%2F%2Fd3efjz1jvymzgz.cloudfront.net%2FCustom%2FContent%2FProducts%2F10%2F11%2F1011792_refrigerante-coca-cola-lata-350ml-fardo-c-12-unidades_z1_637051111791642510.png&imgrefurl=https%3A%2F%2Fwww.oceanob2b.com%2Frefrigerante-coca-cola-lata-350ml-fardo-c-12-unidades-p1011792&tbnid=CSmY_vihbGEEFM&vet=12ahUKEwisxKqbjcn1AhWrmZUCHWsUAZEQMygGegUIARDoAQ..i&docid=RiGSvzEEw8MnWM&w=1200&h=1200&q=coca%20cola&ved=2ahUKEwisxKqbjcn1AhWrmZUCHWsUAZEQMygGegUIARDoAQ",
-		"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.hotdogdomarcio.com.br%2Fwp-content%2Fuploads%2F2020%2F04%2Fcoca-cola-sombra-02.png&imgrefurl=https%3A%2F%2Fwww.hotdogdomarcio.com.br%2Fproduto%2Fcoca-cola%2F&tbnid=vZCeB8EgC2Lo1M&vet=12ahUKEwisxKqbjcn1AhWrmZUCHWsUAZEQMygJegUIARDwAQ..i&docid=dkNzlm9guj3RiM&w=1855&h=1921&q=coca%20cola&ved=2ahUKEwisxKqbjcn1AhWrmZUCHWsUAZEQMygJegUIARDwAQ"},
+		"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw1d6ThcGR9k6TRjcsOA8hdwSRYoztNDR0HtORRH5s1Q&s",
+		"https://www.designi.com.br/images/preview/10000392.jpg"},
 		Description: "coca cola",
 		Time:        "00:02:00",
 		Price:       6.99},
@@ -33,7 +34,7 @@ var drinks = []entities.Drink{
 		Time:        "00:02:00",
 		Price:       6.99},
 	{ID: "5", Name: "Fanta uva", Image: [2]string{
-		"https://www.imigrantesbebidas.com.br/bebida/images/products/full/1905-refrigerante-fanta-uva-lata-220ml.jpg",
+		"https://trimais.vteximg.com.br/arquivos/ids/1028659-1000-1000/foto_original.jpg?v=637716210071430000",
 		"https://deskontao.agilecdn.com.br/28059_1.jpg"},
 		Description: "fanta uva",
 		Time:        "00:02:00",
